@@ -38,7 +38,7 @@
 
 			const file = files[0];
 			const fileExt = file.name.split('.').pop();
-			const filePath = `${crypto.randomUUID}.${fileExt}`;
+			const filePath = `${crypto.randomUUID()}.${fileExt}`;
 
 			const { error } = await supabase.storage.from('avatars').upload(filePath, file);
 
